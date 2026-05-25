@@ -3,7 +3,6 @@ import Nav from '../components/Nav.jsx'
 import Footer from '../components/Footer.jsx'
 import WhatsBtn from '../components/WhatsBtn.jsx'
 import Placeholder from '../components/Placeholder.jsx'
-import Eyebrow from '../components/Eyebrow.jsx'
 import { ArrowR, ArrowD } from '../components/Icons.jsx'
 import { WhatsIcon } from '../components/Icons.jsx'
 import { WHATSAPP_BASE } from '../constants.js'
@@ -23,8 +22,7 @@ function PdHero() {
 
       <div className="container-nx" style={{ position: 'relative', zIndex: 2, padding: '120px 28px 110px' }}>
         <div style={{ maxWidth: 920 }}>
-          <Eyebrow light>Para quem precisa de presença digital de verdade</Eyebrow>
-          <h1 className="font-display display-xl" style={{ margin: '0 0 32px', fontWeight: 500, textWrap: 'balance' }}>
+<h1 className="font-display display-xl" style={{ margin: '0 0 32px', fontWeight: 500, textWrap: 'balance' }}>
             Seu negócio merece um site que <em style={{ fontStyle: 'italic', color: 'var(--nx-accent)' }}>vende enquanto você dorme.</em>
           </h1>
           <p style={{ fontSize: 19, lineHeight: 1.55, color: 'rgba(245,239,224,0.78)', maxWidth: 640, marginBottom: 44, textWrap: 'pretty' }}>
@@ -71,8 +69,7 @@ function PdPorque() {
     <section className="surface-cream sec">
       <div className="container-nx">
         <div style={{ maxWidth: 720, marginBottom: 64 }}>
-          <Eyebrow>Por que você precisa</Eyebrow>
-          <h2 className="font-display display-lg" style={{ margin: 0, fontWeight: 500, textWrap: 'balance' }}>
+<h2 className="font-display display-lg" style={{ margin: 0, fontWeight: 500, textWrap: 'balance' }}>
             Quatro razões para não esperar <em style={{ fontStyle: 'italic', color: 'var(--nx-green)' }}>mais um trimestre sem site.</em>
           </h2>
         </div>
@@ -118,8 +115,7 @@ function PdIncluido() {
       <div className="container-nx">
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1.2fr', gap: 80, alignItems: 'start' }} className="nx-two-col">
           <div>
-            <Eyebrow light>O que está incluído</Eyebrow>
-            <h2 className="font-display display-lg" style={{ margin: '0 0 28px', fontWeight: 500, textWrap: 'balance' }}>
+<h2 className="font-display display-lg" style={{ margin: '0 0 28px', fontWeight: 500, textWrap: 'balance' }}>
               Tudo que seu site precisa. <em style={{ fontStyle: 'italic', color: 'var(--nx-accent)' }}>Sem custo extra.</em>
             </h2>
             <p style={{ fontSize: 17, color: 'rgba(245,239,224,0.7)', lineHeight: 1.6, maxWidth: 420, marginBottom: 36 }}>
@@ -164,8 +160,7 @@ function PdGaleria() {
     <section className="surface-cream sec">
       <div className="container-nx">
         <div style={{ maxWidth: 720, marginBottom: 56 }}>
-          <Eyebrow>Sites entregues</Eyebrow>
-          <h2 className="font-display display-lg" style={{ margin: '0 0 20px', fontWeight: 500, textWrap: 'balance' }}>
+<h2 className="font-display display-lg" style={{ margin: '0 0 20px', fontWeight: 500, textWrap: 'balance' }}>
             Sites que já entregamos.<br/><em style={{ fontStyle: 'italic', color: 'var(--nx-green)' }}>Para negócios como o seu.</em>
           </h2>
           <p style={{ fontSize: 17, color: '#2a3a30', lineHeight: 1.6, maxWidth: 580 }}>
@@ -196,8 +191,7 @@ function PdGaleria() {
               aspect="4/5"
             />
             <div>
-              <Eyebrow>Depoimento · Aegean Watches</Eyebrow>
-              <p className="font-display" style={{ fontSize: 28, lineHeight: 1.25, fontStyle: 'italic', color: 'var(--nx-ink)', margin: '0 0 24px', letterSpacing: '-0.02em', textWrap: 'balance' }}>
+<p className="font-display" style={{ fontSize: 28, lineHeight: 1.25, fontStyle: 'italic', color: 'var(--nx-ink)', margin: '0 0 24px', letterSpacing: '-0.02em', textWrap: 'balance' }}>
                 "Em 30 dias a Nexus fez o que minha rede de indicação não conseguiu em anos. R$ 400 mil em vendas, com R$ 5 mil de mídia. Eu nunca mais opero sem essa estrutura."
               </p>
               <div className="font-mono" style={{ fontSize: 11, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--nx-muted)' }}>
@@ -239,8 +233,7 @@ function PdForm() {
     <section id="formulario" className="surface-dark sec">
       <div className="container-nx">
         <div style={{ maxWidth: 720, marginBottom: 48 }}>
-          <Eyebrow light>Próximo passo</Eyebrow>
-          <h2 className="font-display display-lg" style={{ margin: '0 0 16px', fontWeight: 500, textWrap: 'balance' }}>
+<h2 className="font-display display-lg" style={{ margin: '0 0 16px', fontWeight: 500, textWrap: 'balance' }}>
             Pronto para ter um site que <em style={{ fontStyle: 'italic', color: 'var(--nx-accent)' }}>trabalha por você?</em>
           </h2>
           <p style={{ fontSize: 18, color: 'rgba(245,239,224,0.75)', lineHeight: 1.55 }}>

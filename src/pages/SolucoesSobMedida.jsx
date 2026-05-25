@@ -1,7 +1,6 @@
 import Nav from '../components/Nav.jsx'
 import Footer from '../components/Footer.jsx'
 import WhatsBtn from '../components/WhatsBtn.jsx'
-import Eyebrow from '../components/Eyebrow.jsx'
 import { ArrowD } from '../components/Icons.jsx'
 
 function SsHero() {
@@ -40,8 +39,7 @@ function SsHero() {
 
       <div className="container-nx" style={{ position: 'relative', zIndex: 2, padding: '120px 28px 110px' }}>
         <div style={{ maxWidth: 980 }}>
-          <Eyebrow light>Para negócios com desafios que vão além do padrão</Eyebrow>
-          <h1 className="font-display display-xl" style={{ margin: '0 0 32px', fontWeight: 500, textWrap: 'balance' }}>
+<h1 className="font-display display-xl" style={{ margin: '0 0 32px', fontWeight: 500, textWrap: 'balance' }}>
             Sua empresa precisa de algo que <em style={{ fontStyle: 'italic', color: 'var(--nx-accent)' }}>não está no cardápio?</em> A Nexus resolve.
           </h1>
           <p style={{ fontSize: 19, lineHeight: 1.55, color: 'rgba(245,239,224,0.78)', maxWidth: 660, marginBottom: 44, textWrap: 'pretty' }}>
@@ -95,8 +93,7 @@ function SsExemplos() {
     <section id="exemplos" className="surface-cream sec">
       <div className="container-nx">
         <div style={{ maxWidth: 780, marginBottom: 64 }}>
-          <Eyebrow>O que já resolvemos</Eyebrow>
-          <h2 className="font-display display-lg" style={{ margin: 0, fontWeight: 500, textWrap: 'balance' }}>
+<h2 className="font-display display-lg" style={{ margin: 0, fontWeight: 500, textWrap: 'balance' }}>
             Exemplos do que já resolvemos — <em style={{ fontStyle: 'italic', color: 'var(--nx-green)' }}>e do que podemos resolver para você.</em>
           </h2>
         </div>
@@ -147,8 +144,7 @@ function SsProcesso() {
     <section className="surface-cream-2 sec">
       <div className="container-nx">
         <div style={{ maxWidth: 720, marginBottom: 64 }}>
-          <Eyebrow>Como funciona</Eyebrow>
-          <h2 className="font-display display-lg" style={{ margin: 0, fontWeight: 500, textWrap: 'balance' }}>
+<h2 className="font-display display-lg" style={{ margin: 0, fontWeight: 500, textWrap: 'balance' }}>
             Três etapas. <em style={{ fontStyle: 'italic', color: 'var(--nx-green)' }}>Sem burocracia.</em>
           </h2>
         </div>
@@ -192,8 +188,7 @@ function SsPorque() {
       <div className="container-nx">
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1.1fr', gap: 80, alignItems: 'center' }} className="nx-two-col">
           <div>
-            <Eyebrow>Por que escolher</Eyebrow>
-            <h2 className="font-display display-lg" style={{ margin: '0 0 28px', fontWeight: 500, textWrap: 'balance' }}>
+<h2 className="font-display display-lg" style={{ margin: '0 0 28px', fontWeight: 500, textWrap: 'balance' }}>
               Não vendemos pacote. <em style={{ fontStyle: 'italic', color: 'var(--nx-green)' }}>Resolvemos problema.</em>
             </h2>
             <p style={{ fontSize: 18, lineHeight: 1.65, color: '#2a3a30', marginBottom: 0 }}>
@@ -238,8 +233,7 @@ function SsFinalCTA() {
         </svg>
       </div>
       <div className="container-nx" style={{ position: 'relative', zIndex: 2, textAlign: 'center', maxWidth: 900, margin: '0 auto' }}>
-        <Eyebrow light>Direto pro WhatsApp</Eyebrow>
-        <h2 className="font-display display-lg" style={{ margin: '0 0 28px', fontWeight: 500, textWrap: 'balance' }}>
+<h2 className="font-display display-lg" style={{ margin: '0 0 28px', fontWeight: 500, textWrap: 'balance' }}>
           Conta o desafio. <em style={{ fontStyle: 'italic', color: 'var(--nx-accent)' }}>A Nexus avalia.</em>
         </h2>
         <p style={{ fontSize: 18, color: 'rgba(245,239,224,0.78)', maxWidth: 620, margin: '0 auto 40px', lineHeight: 1.6 }}>

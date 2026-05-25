@@ -3,26 +3,27 @@ import Nav from '../components/Nav.jsx'
 import Footer from '../components/Footer.jsx'
 import WhatsBtn from '../components/WhatsBtn.jsx'
 import Placeholder from '../components/Placeholder.jsx'
-import Eyebrow from '../components/Eyebrow.jsx'
 import { ArrowR, ArrowD } from '../components/Icons.jsx'
 
 function HomeHero() {
   return (
     <section className="surface-dark" style={{ position: 'relative', overflow: 'hidden' }}>
       <div style={{ position: 'absolute', inset: 0, zIndex: 0 }}>
-        <div className="img-placeholder dark" style={{ width: '100%', height: '100%', border: 'none' }}>
-          <div className="label" style={{ opacity: 0.18, fontSize: 13 }}>
-            HERO · CIDADE À NOITE / SILHUETA EMPRESÁRIO
-            <small>/public/hero-home.jpg · estilo cinematográfico série Dark · overlay verde Nexus</small>
-          </div>
-        </div>
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+        >
+          <source src="/atomo.mp4" type="video/mp4" />
+        </video>
         <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(180deg, rgba(6,24,17,0.65) 0%, rgba(6,24,17,0.88) 60%, rgba(6,24,17,0.96) 100%)' }}></div>
       </div>
 
       <div className="container-nx" style={{ position: 'relative', zIndex: 2, padding: '140px 28px 120px' }}>
         <div style={{ maxWidth: 980 }}>
-          <Eyebrow light>Soluções digitais para negócios que querem crescer</Eyebrow>
-          <h1 className="font-display display-xl" style={{ margin: '0 0 32px', fontWeight: 500, textWrap: 'balance' }}>
+<h1 className="font-display display-xl" style={{ margin: '0 0 32px', fontWeight: 500, textWrap: 'balance' }}>
             Conectamos o negócio<br/>que existe ao que<br/><em style={{ fontStyle: 'italic', color: 'var(--nx-accent)' }}>ele deveria ser.</em>
           </h1>
           <p style={{ fontSize: 19, lineHeight: 1.55, color: 'rgba(245,239,224,0.78)', maxWidth: 620, marginBottom: 44, textWrap: 'pretty' }}>
@@ -108,8 +109,7 @@ function HomeSobre() {
             </div>
           </div>
           <div>
-            <Eyebrow>Sobre a Nexus</Eyebrow>
-            <h2 className="font-display display-lg" style={{ margin: '0 0 32px', fontWeight: 500, textWrap: 'balance' }}>
+<h2 className="font-display display-lg" style={{ margin: '0 0 32px', fontWeight: 500, textWrap: 'balance' }}>
               De quem opera.<br/><em style={{ fontStyle: 'italic', color: 'var(--nx-green)' }}>Não de quem ensina.</em>
             </h2>
             <p style={{ fontSize: 18, lineHeight: 1.65, marginBottom: 20, color: '#2a3a30' }}>
@@ -171,8 +171,7 @@ function HomeServicos() {
       <div className="container-nx">
         <div style={{ display: 'flex', alignItems: 'end', justifyContent: 'space-between', marginBottom: 64, flexWrap: 'wrap', gap: 32 }}>
           <div style={{ maxWidth: 560 }}>
-            <Eyebrow light>Serviços</Eyebrow>
-            <h2 className="font-display display-lg" style={{ margin: 0, fontWeight: 500, textWrap: 'balance' }}>
+<h2 className="font-display display-lg" style={{ margin: 0, fontWeight: 500, textWrap: 'balance' }}>
               Três frentes. Uma só lógica: <em style={{ fontStyle: 'italic', color: 'var(--nx-accent)' }}>conectar negócio a resultado.</em>
             </h2>
           </div>
@@ -221,8 +220,7 @@ function HomeCase() {
             aspect="4/5"
           />
           <div>
-            <Eyebrow>Case real · Aegean Watches</Eyebrow>
-            <h2 className="font-display display-md" style={{ margin: '0 0 24px', fontWeight: 500, lineHeight: 1.05, textWrap: 'balance' }}>
+<h2 className="font-display display-md" style={{ margin: '0 0 24px', fontWeight: 500, lineHeight: 1.05, textWrap: 'balance' }}>
               R$ 400.000 em vendas.<br/>R$ 5.000 em mídia.<br/><em style={{ fontStyle: 'italic', color: 'var(--nx-green)' }}>30 dias.</em>
             </h2>
             <p style={{ fontSize: 17, lineHeight: 1.6, marginBottom: 36, color: '#2a3a30' }}>
@@ -264,8 +262,7 @@ function HomeFinalCTA() {
         </svg>
       </div>
       <div className="container-nx" style={{ position: 'relative', zIndex: 2, textAlign: 'center', maxWidth: 880, margin: '0 auto' }}>
-        <Eyebrow light>Vamos conectar</Eyebrow>
-        <h2 className="font-display display-lg" style={{ margin: '0 0 28px', fontWeight: 500, textWrap: 'balance' }}>
+<h2 className="font-display display-lg" style={{ margin: '0 0 28px', fontWeight: 500, textWrap: 'balance' }}>
           Seu negócio é bom.<br/><em style={{ fontStyle: 'italic', color: 'var(--nx-accent)' }}>Está na hora de aparecer como tal.</em>
         </h2>
         <p style={{ fontSize: 18, color: 'rgba(245,239,224,0.75)', maxWidth: 600, margin: '0 auto 40px', lineHeight: 1.6 }}>

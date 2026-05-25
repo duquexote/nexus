@@ -48,24 +48,6 @@ body {
 .surface-cream { background: var(--nx-cream-soft); color: var(--nx-ink); }
 .surface-cream-2 { background: var(--nx-cream); color: var(--nx-ink); }
 
-/* Eyebrow / pré-headline */
-.eyebrow {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 11px;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  font-weight: 500;
-}
-
-.rule {
-  display: inline-block;
-  width: 28px;
-  height: 1px;
-  background: currentColor;
-  vertical-align: middle;
-  margin-right: 12px;
-  opacity: 0.55;
-}
 
 /* === Buttons === */
 .btn {

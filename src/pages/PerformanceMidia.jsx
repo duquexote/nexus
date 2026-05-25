@@ -3,7 +3,6 @@ import Nav from '../components/Nav.jsx'
 import Footer from '../components/Footer.jsx'
 import WhatsBtn from '../components/WhatsBtn.jsx'
 import Placeholder from '../components/Placeholder.jsx'
-import Eyebrow from '../components/Eyebrow.jsx'
 import { ArrowR, ArrowD } from '../components/Icons.jsx'
 import { WhatsIcon } from '../components/Icons.jsx'
 import { WHATSAPP_BASE } from '../constants.js'
@@ -23,8 +22,7 @@ function PmHero() {
 
       <div className="container-nx" style={{ position: 'relative', zIndex: 2, padding: '120px 28px 110px' }}>
         <div style={{ maxWidth: 980 }}>
-          <Eyebrow light>Para negócios que querem mais clientes todo mês</Eyebrow>
-          <h1 className="font-display display-xl" style={{ margin: '0 0 32px', fontWeight: 500, textWrap: 'balance' }}>
+<h1 className="font-display display-xl" style={{ margin: '0 0 32px', fontWeight: 500, textWrap: 'balance' }}>
             Tráfego pago que não queima dinheiro. <em style={{ fontStyle: 'italic', color: 'var(--nx-accent)' }}>Que traz cliente.</em>
           </h1>
           <p style={{ fontSize: 19, lineHeight: 1.55, color: 'rgba(245,239,224,0.78)', maxWidth: 720, marginBottom: 44, textWrap: 'pretty' }}>
@@ -86,8 +84,7 @@ function PmObjecao() {
     <section className="surface-cream sec">
       <div className="container-nx">
         <div style={{ maxWidth: 780, marginBottom: 64 }}>
-          <Eyebrow>Quebra de objeção</Eyebrow>
-          <h2 className="font-display display-lg" style={{ margin: 0, fontWeight: 500, textWrap: 'balance' }}>
+<h2 className="font-display display-lg" style={{ margin: 0, fontWeight: 500, textWrap: 'balance' }}>
             O problema não é o Meta Ads. <em style={{ fontStyle: 'italic', color: 'var(--nx-green)' }}>É como está sendo usado.</em>
           </h2>
         </div>
@@ -141,8 +138,7 @@ function PmProcesso() {
     <section id="processo" className="surface-cream-2 sec">
       <div className="container-nx">
         <div style={{ maxWidth: 760, marginBottom: 64 }}>
-          <Eyebrow>Como funciona</Eyebrow>
-          <h2 className="font-display display-lg" style={{ margin: 0, fontWeight: 500, textWrap: 'balance' }}>
+<h2 className="font-display display-lg" style={{ margin: 0, fontWeight: 500, textWrap: 'balance' }}>
             Do diagnóstico ao lead <em style={{ fontStyle: 'italic', color: 'var(--nx-green)' }}>no seu WhatsApp.</em>
           </h2>
         </div>
@@ -192,8 +188,7 @@ function PmCase() {
       <div className="container-nx">
         <div style={{ display: 'grid', gridTemplateColumns: '1.1fr 1fr', gap: 64, alignItems: 'center' }} className="nx-two-col">
           <div>
-            <Eyebrow light>Resultado real</Eyebrow>
-            <h2 className="font-display display-lg" style={{ margin: '0 0 28px', fontWeight: 500, textWrap: 'balance' }}>
+<h2 className="font-display display-lg" style={{ margin: '0 0 28px', fontWeight: 500, textWrap: 'balance' }}>
               R$ 5.000 investidos.<br/><em style={{ fontStyle: 'italic', color: 'var(--nx-accent)' }}>R$ 400.000 faturados.</em>
             </h2>
             <p style={{ fontSize: 18, lineHeight: 1.6, color: 'rgba(245,239,224,0.78)', marginBottom: 36 }}>
@@ -275,8 +270,7 @@ function PmForm() {
     <section id="formulario" className="surface-cream sec">
       <div className="container-nx">
         <div style={{ maxWidth: 780, marginBottom: 48 }}>
-          <Eyebrow>Próximo passo</Eyebrow>
-          <h2 className="font-display display-lg" style={{ margin: '0 0 16px', fontWeight: 500, textWrap: 'balance' }}>
+<h2 className="font-display display-lg" style={{ margin: '0 0 16px', fontWeight: 500, textWrap: 'balance' }}>
             Chega de queimar verba em <em style={{ fontStyle: 'italic', color: 'var(--nx-green)' }}>anúncio que não converte.</em>
           </h2>
           <p style={{ fontSize: 18, color: '#2a3a30', lineHeight: 1.55 }}>
