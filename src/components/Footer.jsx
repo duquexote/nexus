@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom'
-import AtomMark from './AtomMark.jsx'
 import WhatsBtn from './WhatsBtn.jsx'
 import { WHATSAPP_URL } from '../constants.js'
 
@@ -9,9 +8,8 @@ export default function Footer() {
       <div className="container-nx" style={{ padding: '72px 28px 36px' }}>
         <div style={{ display: 'grid', gridTemplateColumns: '1.4fr 1fr 1fr 1fr', gap: 48 }} className="nx-footer-grid">
           <div>
-            <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 24 }}>
-              <AtomMark size={32} color="var(--nx-cream)" />
-              <span className="font-display" style={{ fontSize: 26, letterSpacing: '0.04em' }}>NEXUS</span>
+            <div style={{ marginBottom: 24 }}>
+              <img src="/logo-nexus-branco.png" alt="Nexus" style={{ height: 24, width: 'auto', display: 'block' }} />
             </div>
             <p className="font-display" style={{ fontSize: 22, lineHeight: 1.25, letterSpacing: '-0.02em', maxWidth: 380, marginBottom: 28 }}>
               Conectamos o negócio que existe ao que ele deveria ser.

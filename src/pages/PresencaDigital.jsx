@@ -11,12 +11,9 @@ function PdHero() {
   return (
     <section className="surface-dark" style={{ position: 'relative', overflow: 'hidden' }}>
       <div style={{ position: 'absolute', inset: 0, zIndex: 0 }}>
-        <div className="img-placeholder dark" style={{ width: '100%', height: '100%', border: 'none' }}>
-          <div className="label" style={{ opacity: 0.18, fontSize: 13 }}>
-            HERO · MOCKUPS DE SITES EM LAPTOP / CELULAR
-            <small>/public/hero-presenca.jpg · vários nichos · overlay verde Nexus</small>
-          </div>
-        </div>
+        <video autoPlay muted loop playsInline style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}>
+          <source src="/atomo.mp4" type="video/mp4" />
+        </video>
         <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(180deg, rgba(6,24,17,0.6) 0%, rgba(6,24,17,0.88) 70%, rgba(6,24,17,0.96) 100%)' }}></div>
       </div>
 
@@ -150,12 +147,15 @@ function PdIncluido() {
 }
 
 function PdGaleria() {
+  const [active, setActive] = useState(null)
+
   const sites = [
-    { nicho: 'Relógios de luxo', file: '/public/site-aegean.jpg' },
-    { nicho: 'Clínica odontológica', file: '/public/site-clinica.jpg' },
-    { nicho: 'Profissional liberal', file: '/public/site-advocacia.jpg' },
-    { nicho: 'Comércio especializado', file: '/public/site-comercio.jpg' },
+    { nicho: 'Aegean Watches', file: '/site-aegean.png', url: 'https://aegeanwatches.com.br' },
+    { nicho: 'Ana Moreira', file: '/site-ana.png', url: 'https://anamoreirapsi.com.br' },
+    { nicho: 'Alice Damasceno', file: '/site-alice.png', url: 'https://alicedamasceno.com.br' },
+    { nicho: 'Viviane Leite', file: '/site-viviane.png', url: 'https://vivianeleite.com.br' },
   ]
+
   return (
     <section className="surface-cream sec">
       <div className="container-nx">
@@ -169,12 +169,27 @@ function PdGaleria() {
         </div>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: 24 }} className="nx-grid-2">
           {sites.map((s, i) => (
-            <div key={i}>
-              <Placeholder
-                label={`SITE · ${s.nicho.toUpperCase()}`}
-                hint={s.file}
-                aspect="4/3"
-              />
+            <div key={i} onClick={() => setActive(s)} style={{ cursor: 'pointer' }} className="nx-site-card">
+              <div style={{ position: 'relative', overflow: 'hidden', borderRadius: 'var(--nx-radius)' }}>
+                <img
+                  src={s.file}
+                  alt={`Site · ${s.nicho}`}
+                  style={{ width: '100%', aspectRatio: '4/3', objectFit: 'cover', display: 'block', transition: 'transform 0.3s ease' }}
+                  className="nx-site-img"
+                />
+                <div className="nx-site-overlay" style={{
+                  position: 'absolute', inset: 0,
+                  background: 'rgba(6,24,17,0.55)',
+                  display: 'flex', alignItems: 'center', justifyContent: 'center',
+                  opacity: 0, transition: 'opacity 0.3s ease',
+                }}>
+                  <span style={{
+                    color: 'var(--nx-cream)', fontSize: 13, fontFamily: "'JetBrains Mono', monospace",
+                    letterSpacing: '0.18em', textTransform: 'uppercase',
+                    border: '1px solid rgba(245,239,224,0.5)', padding: '10px 20px', borderRadius: 'var(--nx-radius)',
+                  }}>Ver site →</span>
+                </div>
+              </div>
               <div style={{ marginTop: 16, display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                 <div className="font-display" style={{ fontSize: 18, color: 'var(--nx-green)', letterSpacing: '-0.01em' }}>{s.nicho}</div>
                 <div className="font-mono" style={{ fontSize: 10, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--nx-muted)' }}>case · 0{i + 1}</div>
@@ -204,7 +219,72 @@ function PdGaleria() {
       <style>{`
         @media (max-width: 760px) { .nx-grid-2 { grid-template-columns: 1fr !important; } }
         @media (max-width: 720px) { .nx-depoimento { padding: 28px !important; } }
+        .nx-site-card:hover .nx-site-overlay { opacity: 1 !important; }
+        .nx-site-card:hover .nx-site-img { transform: scale(1.03); }
       `}</style>
+
+      {active && (
+        <div
+          onClick={() => setActive(null)}
+          style={{
+            position: 'fixed', inset: 0, zIndex: 100,
+            background: 'rgba(6,24,17,0.85)',
+            display: 'flex', alignItems: 'center', justifyContent: 'center',
+            padding: '24px',
+          }}
+        >
+          <div
+            onClick={e => e.stopPropagation()}
+            style={{
+              width: '100%', maxWidth: 1100,
+              height: '85vh',
+              background: 'var(--nx-green-deep)',
+              border: '1px solid var(--nx-green-line)',
+              borderRadius: 'var(--nx-radius)',
+              display: 'flex', flexDirection: 'column',
+              overflow: 'hidden',
+            }}
+          >
+            <div style={{
+              display: 'flex', alignItems: 'center', justifyContent: 'space-between',
+              padding: '14px 20px',
+              borderBottom: '1px solid var(--nx-green-line)',
+              flexShrink: 0,
+            }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
+                <span className="font-mono" style={{ fontSize: 11, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--nx-accent)' }}>
+                  {active.nicho}
+                </span>
+                <a
+                  href={active.url}
+                  target="_blank"
+                  rel="noopener"
+                  style={{ fontSize: 12, color: 'rgba(245,239,224,0.45)', textDecoration: 'none', fontFamily: "'JetBrains Mono', monospace" }}
+                >
+                  {active.url.replace('https://', '')} ↗
+                </a>
+              </div>
+              <button
+                onClick={() => setActive(null)}
+                style={{
+                  background: 'transparent', border: '1px solid var(--nx-green-line)',
+                  color: 'var(--nx-cream)', cursor: 'pointer',
+                  padding: '6px 14px', borderRadius: 'var(--nx-radius)',
+                  fontSize: 12, fontFamily: "'JetBrains Mono', monospace",
+                  letterSpacing: '0.1em', textTransform: 'uppercase',
+                }}
+              >
+                Fechar ✕
+              </button>
+            </div>
+            <iframe
+              src={active.url}
+              title={active.nicho}
+              style={{ flex: 1, border: 'none', width: '100%' }}
+            />
+          </div>
+        </div>
+      )}
     </section>
   )
 }

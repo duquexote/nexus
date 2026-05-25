@@ -6,34 +6,10 @@ import { ArrowD } from '../components/Icons.jsx'
 function SsHero() {
   return (
     <section className="surface-dark" style={{ position: 'relative', overflow: 'hidden' }}>
-      <div style={{ position: 'absolute', inset: 0, zIndex: 0, opacity: 0.5 }}>
-        <svg width="100%" height="100%" viewBox="0 0 1400 800" preserveAspectRatio="xMidYMid slice" style={{ position: 'absolute', inset: 0 }}>
-          <defs>
-            <radialGradient id="nodeGrad" cx="50%" cy="50%" r="50%">
-              <stop offset="0%" stopColor="#B8C9A8" stopOpacity="0.9"/>
-              <stop offset="100%" stopColor="#B8C9A8" stopOpacity="0"/>
-            </radialGradient>
-          </defs>
-          <g stroke="#1f4030" strokeWidth="1" fill="none">
-            <line x1="200" y1="180" x2="500" y2="320" />
-            <line x1="500" y1="320" x2="780" y2="200" />
-            <line x1="780" y1="200" x2="1100" y2="380" />
-            <line x1="500" y1="320" x2="620" y2="560" />
-            <line x1="620" y1="560" x2="900" y2="640" />
-            <line x1="900" y1="640" x2="1100" y2="380" />
-            <line x1="200" y1="180" x2="320" y2="500" />
-            <line x1="320" y1="500" x2="620" y2="560" />
-            <line x1="1100" y1="380" x2="1280" y2="160" />
-          </g>
-          {[
-            [200,180],[500,320],[780,200],[1100,380],[620,560],[900,640],[320,500],[1280,160]
-          ].map(([x,y], i) => (
-            <g key={i}>
-              <circle cx={x} cy={y} r="14" fill="url(#nodeGrad)" />
-              <circle cx={x} cy={y} r="3" fill="#B8C9A8" />
-            </g>
-          ))}
-        </svg>
+      <div style={{ position: 'absolute', inset: 0, zIndex: 0 }}>
+        <video autoPlay muted loop playsInline style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}>
+          <source src="/atomo.mp4" type="video/mp4" />
+        </video>
         <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(180deg, rgba(6,24,17,0.5) 0%, rgba(6,24,17,0.85) 60%, rgba(6,24,17,0.96) 100%)' }}></div>
       </div>
 
@@ -223,14 +199,7 @@ function SsFinalCTA() {
   return (
     <section className="surface-dark sec-lg" style={{ position: 'relative', overflow: 'hidden' }}>
       <div style={{ position: 'absolute', inset: 0, opacity: 0.06, display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: 0 }}>
-        <svg width="700" height="700" viewBox="0 0 40 40">
-          <g stroke="var(--nx-cream)" strokeWidth="0.4" fill="none">
-            <ellipse cx="20" cy="20" rx="16" ry="6" />
-            <ellipse cx="20" cy="20" rx="16" ry="6" transform="rotate(60 20 20)" />
-            <ellipse cx="20" cy="20" rx="16" ry="6" transform="rotate(120 20 20)" />
-          </g>
-          <circle cx="20" cy="20" r="2.6" fill="var(--nx-cream)" />
-        </svg>
+        <img src="/atomo-branco.png" alt="" aria-hidden="true" style={{ width: 700, height: 700, objectFit: 'contain' }} />
       </div>
       <div className="container-nx" style={{ position: 'relative', zIndex: 2, textAlign: 'center', maxWidth: 900, margin: '0 auto' }}>
 <h2 className="font-display display-lg" style={{ margin: '0 0 28px', fontWeight: 500, textWrap: 'balance' }}>

@@ -11,12 +11,9 @@ function PmHero() {
   return (
     <section className="surface-dark" style={{ position: 'relative', overflow: 'hidden' }}>
       <div style={{ position: 'absolute', inset: 0, zIndex: 0 }}>
-        <div className="img-placeholder dark" style={{ width: '100%', height: '100%', border: 'none' }}>
-          <div className="label" style={{ opacity: 0.18, fontSize: 13 }}>
-            HERO · DASHBOARD META ADS EM ASCENSÃO
-            <small>/public/hero-performance.jpg · screenshot real de campanha · dados anonimizados</small>
-          </div>
-        </div>
+        <video autoPlay muted loop playsInline style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}>
+          <source src="/atomo.mp4" type="video/mp4" />
+        </video>
         <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(180deg, rgba(6,24,17,0.62) 0%, rgba(6,24,17,0.9) 70%, rgba(6,24,17,0.97) 100%)' }}></div>
       </div>
 

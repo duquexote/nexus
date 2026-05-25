@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
-import AtomMark from './AtomMark.jsx'
 import WhatsBtn from './WhatsBtn.jsx'
 
 const links = [
@@ -19,9 +18,8 @@ export default function Nav() {
   return (
     <header className="surface-dark" style={{ position: 'sticky', top: 0, zIndex: 50, borderBottom: '1px solid var(--nx-green-line)' }}>
       <div className="container-nx" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', height: 72 }}>
-        <Link to="/" style={{ display: 'flex', alignItems: 'center', gap: 12, color: 'var(--nx-cream)', textDecoration: 'none' }}>
-          <AtomMark size={26} color="var(--nx-cream)" />
-          <span className="font-display" style={{ fontSize: 22, letterSpacing: '0.04em', fontWeight: 500 }}>NEXUS</span>
+        <Link to="/" style={{ display: 'flex', alignItems: 'center', textDecoration: 'none' }}>
+          <img src="/logo-nexus-branco.png" alt="Nexus" style={{ height: 18, width: 'auto', display: 'block' }} />
         </Link>
         <nav className="nx-nav-desktop" style={{ display: 'flex', gap: 36, alignItems: 'center' }}>
           {links.map(l => (

@@ -2,7 +2,6 @@ import { Link } from 'react-router-dom'
 import Nav from '../components/Nav.jsx'
 import Footer from '../components/Footer.jsx'
 import WhatsBtn from '../components/WhatsBtn.jsx'
-import Placeholder from '../components/Placeholder.jsx'
 import { ArrowR, ArrowD } from '../components/Icons.jsx'
 
 function HomeHero() {
@@ -99,10 +98,10 @@ function HomeSobre() {
       <div className="container-nx">
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1.2fr', gap: 80, alignItems: 'center' }} className="nx-two-col">
           <div>
-            <Placeholder
-              label="KEVIN LIMA"
-              hint="/public/kevin-lima.jpg · retrato fundador · expressão séria, fundo escuro"
-              aspect="3/4"
+            <img
+              src="/kevin.webp"
+              alt="Kevin Lima — Fundador da Nexus"
+              style={{ width: '100%', aspectRatio: '3/4', objectFit: 'cover', display: 'block', borderRadius: 'var(--nx-radius)' }}
             />
             <div className="font-mono" style={{ fontSize: 11, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--nx-muted)', marginTop: 16 }}>
               Kevin Lima · Fundador & estrategista
@@ -214,10 +213,10 @@ function HomeCase() {
     <section id="cases" className="surface-cream sec">
       <div className="container-nx">
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 64, alignItems: 'center' }} className="nx-two-col">
-          <Placeholder
-            label="RELÓGIO DE LUXO · CLOSE"
-            hint="/public/case-aegean.jpg · imagem cinematográfica · iluminação contrastada"
-            aspect="4/5"
+          <img
+            src="/relogio.PNG"
+            alt="Relógio Aegean Watches"
+            style={{ width: '100%', aspectRatio: '4/5', objectFit: 'cover', display: 'block', borderRadius: 'var(--nx-radius)' }}
           />
           <div>
 <h2 className="font-display display-md" style={{ margin: '0 0 24px', fontWeight: 500, lineHeight: 1.05, textWrap: 'balance' }}>
@@ -252,14 +251,7 @@ function HomeFinalCTA() {
   return (
     <section className="surface-dark sec-lg" style={{ position: 'relative', overflow: 'hidden' }}>
       <div style={{ position: 'absolute', inset: 0, opacity: 0.07, display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: 0 }}>
-        <svg width="600" height="600" viewBox="0 0 40 40">
-          <g stroke="var(--nx-cream)" strokeWidth="0.5" fill="none">
-            <ellipse cx="20" cy="20" rx="16" ry="6" />
-            <ellipse cx="20" cy="20" rx="16" ry="6" transform="rotate(60 20 20)" />
-            <ellipse cx="20" cy="20" rx="16" ry="6" transform="rotate(120 20 20)" />
-          </g>
-          <circle cx="20" cy="20" r="2.6" fill="var(--nx-cream)" />
-        </svg>
+        <img src="/atomo-branco.png" alt="" aria-hidden="true" style={{ width: 600, height: 600, objectFit: 'contain' }} />
       </div>
       <div className="container-nx" style={{ position: 'relative', zIndex: 2, textAlign: 'center', maxWidth: 880, margin: '0 auto' }}>
 <h2 className="font-display display-lg" style={{ margin: '0 0 28px', fontWeight: 500, textWrap: 'balance' }}>
