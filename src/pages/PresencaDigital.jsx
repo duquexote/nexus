@@ -2,7 +2,6 @@ import { useState } from 'react'
 import Nav from '../components/Nav.jsx'
 import Footer from '../components/Footer.jsx'
 import WhatsBtn from '../components/WhatsBtn.jsx'
-import Placeholder from '../components/Placeholder.jsx'
 import { ArrowR, ArrowD } from '../components/Icons.jsx'
 import { WhatsIcon } from '../components/Icons.jsx'
 import { WHATSAPP_BASE } from '../constants.js'
@@ -19,7 +18,7 @@ function PdHero() {
 
       <div className="container-nx" style={{ position: 'relative', zIndex: 2, padding: '120px 28px 110px' }}>
         <div style={{ maxWidth: 920 }}>
-<h1 className="font-display display-xl" style={{ margin: '0 0 32px', fontWeight: 500, textWrap: 'balance' }}>
+<h1 className="font-display display-xl" style={{ margin: 0, fontWeight: 500, textWrap: 'balance' }}>
             Seu negócio merece um site que <em style={{ fontStyle: 'italic', color: 'var(--nx-accent)' }}>vende enquanto você dorme.</em>
           </h1>
           <p style={{ fontSize: 19, lineHeight: 1.55, color: 'rgba(245,239,224,0.78)', maxWidth: 640, marginBottom: 44, textWrap: 'pretty' }}>
@@ -80,7 +79,7 @@ function PdPorque() {
               paddingRight: i % 2 === 0 ? 36 : 0,
             }}>
               <div className="font-mono" style={{ fontSize: 11, letterSpacing: '0.18em', color: 'var(--nx-muted)', marginBottom: 20 }}>/ {it.num}</div>
-              <h3 className="font-display" style={{ fontSize: 28, margin: '0 0 14px', fontWeight: 500, letterSpacing: '-0.02em', color: 'var(--nx-green)' }}>{it.t}</h3>
+              <h3 className="font-display" style={{ fontSize: 28, margin: 0, fontWeight: 500, letterSpacing: '-0.02em', color: 'var(--nx-green)' }}>{it.t}</h3>
               <p style={{ fontSize: 16, lineHeight: 1.6, color: '#2a3a30', margin: 0, maxWidth: 460 }}>{it.d}</p>
             </div>
           ))}
@@ -112,7 +111,7 @@ function PdIncluido() {
       <div className="container-nx">
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1.2fr', gap: 80, alignItems: 'start' }} className="nx-two-col">
           <div>
-<h2 className="font-display display-lg" style={{ margin: '0 0 28px', fontWeight: 500, textWrap: 'balance' }}>
+<h2 className="font-display display-lg" style={{ margin: 0, fontWeight: 500, textWrap: 'balance' }}>
               Tudo que seu site precisa. <em style={{ fontStyle: 'italic', color: 'var(--nx-accent)' }}>Sem custo extra.</em>
             </h2>
             <p style={{ fontSize: 17, color: 'rgba(245,239,224,0.7)', lineHeight: 1.6, maxWidth: 420, marginBottom: 36 }}>
@@ -146,13 +145,92 @@ function PdIncluido() {
   )
 }
 
+function PdDepoimentos() {
+  const [idx, setIdx] = useState(0)
+  const total = 3
+
+  const prev = () => setIdx(i => (i - 1 + total) % total)
+  const next = () => setIdx(i => (i + 1) % total)
+
+  return (
+    <div style={{ marginTop: 96, maxWidth: 720, margin: '96px auto 0' }}>
+      <div style={{ marginBottom: 56 }}>
+        <div className="font-mono" style={{ fontSize: 11, letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--nx-muted)', marginBottom: 16 }}>Depoimentos</div>
+        <h2 className="font-display display-md" style={{ margin: 0, fontWeight: 500, textWrap: 'balance', color: 'var(--nx-ink)' }}>
+          Quem já passou pela Nexus<br /><em style={{ fontStyle: 'italic', color: 'var(--nx-green)' }}>conta melhor do que a gente.</em>
+        </h2>
+      </div>
+
+      <div style={{ position: 'relative' }}>
+        <div style={{ overflow: 'hidden', borderRadius: 'var(--nx-radius)' }}>
+          <div style={{
+            display: 'flex',
+            transform: `translateX(-${idx * 100}%)`,
+            transition: 'transform 0.45s cubic-bezier(0.4,0,0.2,1)',
+          }}>
+            {[1, 2, 3].map(n => (
+              <div key={n} style={{ minWidth: '100%' }}>
+                <img
+                  src={`/depoimento${n}.jpeg`}
+                  alt={`Depoimento ${n}`}
+                  style={{ width: '100%', height: 'auto', display: 'block', objectFit: 'cover' }}
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginTop: 28 }}>
+          <div style={{ display: 'flex', gap: 8 }}>
+            {[0, 1, 2].map(n => (
+              <button
+                key={n}
+                onClick={() => setIdx(n)}
+                style={{
+                  width: n === idx ? 28 : 8, height: 8,
+                  borderRadius: 4,
+                  background: n === idx ? 'var(--nx-green)' : 'var(--nx-cream-line)',
+                  border: 'none', cursor: 'pointer', padding: 0,
+                  transition: 'width 0.3s ease, background 0.3s ease',
+                }}
+              />
+            ))}
+          </div>
+          <div style={{ display: 'flex', gap: 10 }}>
+            <button onClick={prev} style={{
+              width: 44, height: 44, borderRadius: '50%',
+              background: 'transparent', border: '1px solid var(--nx-cream-line)',
+              color: 'var(--nx-green)', cursor: 'pointer', fontSize: 18,
+              display: 'flex', alignItems: 'center', justifyContent: 'center',
+              transition: 'border-color 0.2s ease',
+            }}
+              onMouseEnter={e => e.currentTarget.style.borderColor = 'var(--nx-green)'}
+              onMouseLeave={e => e.currentTarget.style.borderColor = 'var(--nx-cream-line)'}
+            >←</button>
+            <button onClick={next} style={{
+              width: 44, height: 44, borderRadius: '50%',
+              background: 'transparent', border: '1px solid var(--nx-cream-line)',
+              color: 'var(--nx-green)', cursor: 'pointer', fontSize: 18,
+              display: 'flex', alignItems: 'center', justifyContent: 'center',
+              transition: 'border-color 0.2s ease',
+            }}
+              onMouseEnter={e => e.currentTarget.style.borderColor = 'var(--nx-green)'}
+              onMouseLeave={e => e.currentTarget.style.borderColor = 'var(--nx-cream-line)'}
+            >→</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+}
+
 function PdGaleria() {
   const [active, setActive] = useState(null)
 
   const sites = [
     { nicho: 'Aegean Watches', file: '/site-aegean.png', url: 'https://aegeanwatches.com.br' },
     { nicho: 'Ana Moreira', file: '/site-ana.png', url: 'https://anamoreirapsi.com.br' },
-    { nicho: 'Alice Damasceno', file: '/site-alice.png', url: 'https://alicedamasceno.com.br' },
+    { nicho: 'Alice Damasceno', file: '/site-alice.png', url: 'https://alicedamascenopsi.com.br' },
     { nicho: 'Viviane Leite', file: '/site-viviane.png', url: 'https://vivianeleite.com.br' },
   ]
 
@@ -160,7 +238,7 @@ function PdGaleria() {
     <section className="surface-cream sec">
       <div className="container-nx">
         <div style={{ maxWidth: 720, marginBottom: 56 }}>
-<h2 className="font-display display-lg" style={{ margin: '0 0 20px', fontWeight: 500, textWrap: 'balance' }}>
+<h2 className="font-display display-lg" style={{ margin: 0, fontWeight: 500, textWrap: 'balance' }}>
             Sites que já entregamos.<br/><em style={{ fontStyle: 'italic', color: 'var(--nx-green)' }}>Para negócios como o seu.</em>
           </h2>
           <p style={{ fontSize: 17, color: '#2a3a30', lineHeight: 1.6, maxWidth: 580 }}>
@@ -198,23 +276,7 @@ function PdGaleria() {
           ))}
         </div>
 
-        <div style={{ marginTop: 80, padding: 48, background: 'var(--nx-cream-soft)', border: '1px solid var(--nx-cream-line)', borderRadius: 'var(--nx-radius)' }} className="nx-depoimento">
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1.6fr', gap: 48, alignItems: 'center' }} className="nx-two-col">
-            <Placeholder
-              label="DEPOIMENTO EDUARDO"
-              hint="/public/depoimento-eduardo.mp4 · embed vídeo ou print do áudio"
-              aspect="4/5"
-            />
-            <div>
-<p className="font-display" style={{ fontSize: 28, lineHeight: 1.25, fontStyle: 'italic', color: 'var(--nx-ink)', margin: '0 0 24px', letterSpacing: '-0.02em', textWrap: 'balance' }}>
-                "Em 30 dias a Nexus fez o que minha rede de indicação não conseguiu em anos. R$ 400 mil em vendas, com R$ 5 mil de mídia. Eu nunca mais opero sem essa estrutura."
-              </p>
-              <div className="font-mono" style={{ fontSize: 11, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--nx-muted)' }}>
-                Eduardo Dourado · Aegean Watches
-              </div>
-            </div>
-          </div>
-        </div>
+        <PdDepoimentos />
       </div>
       <style>{`
         @media (max-width: 760px) { .nx-grid-2 { grid-template-columns: 1fr !important; } }
@@ -313,7 +375,7 @@ function PdForm() {
     <section id="formulario" className="surface-dark sec">
       <div className="container-nx">
         <div style={{ maxWidth: 720, marginBottom: 48 }}>
-<h2 className="font-display display-lg" style={{ margin: '0 0 16px', fontWeight: 500, textWrap: 'balance' }}>
+<h2 className="font-display display-lg" style={{ margin: 0, fontWeight: 500, textWrap: 'balance' }}>
             Pronto para ter um site que <em style={{ fontStyle: 'italic', color: 'var(--nx-accent)' }}>trabalha por você?</em>
           </h2>
           <p style={{ fontSize: 18, color: 'rgba(245,239,224,0.75)', lineHeight: 1.55 }}>

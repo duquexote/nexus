@@ -19,7 +19,7 @@ function PmHero() {
 
       <div className="container-nx" style={{ position: 'relative', zIndex: 2, padding: '120px 28px 110px' }}>
         <div style={{ maxWidth: 980 }}>
-<h1 className="font-display display-xl" style={{ margin: '0 0 32px', fontWeight: 500, textWrap: 'balance' }}>
+<h1 className="font-display display-xl" style={{ margin: 0, fontWeight: 500, textWrap: 'balance' }}>
             Tráfego pago que não queima dinheiro. <em style={{ fontStyle: 'italic', color: 'var(--nx-accent)' }}>Que traz cliente.</em>
           </h1>
           <p style={{ fontSize: 19, lineHeight: 1.55, color: 'rgba(245,239,224,0.78)', maxWidth: 720, marginBottom: 44, textWrap: 'pretty' }}>
@@ -116,8 +116,7 @@ function PmObjecao() {
       </div>
       <style>{`
         @media (max-width: 760px) {
-          .nx-obj-grid { grid-template-columns: 1fr !important; }
-          .nx-obj-grid > div { border-right: none !important; }
+          .nx-obj-grid > div { font-size: 14px !important; padding: 16px !important; }
         }
       `}</style>
     </section>
@@ -144,8 +143,8 @@ function PmProcesso() {
           <div className="nx-process-line" style={{ position: 'absolute', top: 38, left: '12.5%', right: '12.5%', height: 1, background: 'var(--nx-cream-line)' }}></div>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 24, position: 'relative' }} className="nx-process-grid">
             {steps.map((s, i) => (
-              <div key={i} style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
-                <div style={{
+              <div key={i} style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }} className="nx-process-item">
+                <div className="nx-process-circle" style={{
                   width: 76, height: 76,
                   borderRadius: '50%',
                   background: 'var(--nx-green)',
@@ -155,12 +154,15 @@ function PmProcesso() {
                   fontSize: 26,
                   fontWeight: 500,
                   marginBottom: 28,
+                  flexShrink: 0,
                   position: 'relative',
                   zIndex: 2,
                   border: '4px solid var(--nx-cream-soft)',
                 }}>{s.n}</div>
-                <h3 className="font-display" style={{ fontSize: 26, margin: '0 0 12px', fontWeight: 500, letterSpacing: '-0.02em', color: 'var(--nx-green)' }}>{s.t}</h3>
-                <p style={{ fontSize: 15, lineHeight: 1.6, color: '#2a3a30', margin: 0 }}>{s.d}</p>
+                <div className="nx-process-text">
+                  <h3 className="font-display" style={{ fontSize: 26, margin: 0, fontWeight: 500, letterSpacing: '-0.02em', color: 'var(--nx-green)' }}>{s.t}</h3>
+                  <p style={{ fontSize: 15, lineHeight: 1.6, color: '#2a3a30', margin: 0 }}>{s.d}</p>
+                </div>
               </div>
             ))}
           </div>
@@ -173,6 +175,9 @@ function PmProcesso() {
         }
         @media (max-width: 560px) {
           .nx-process-grid { grid-template-columns: 1fr !important; }
+          .nx-process-item { flex-direction: row !important; align-items: flex-start !important; gap: 20px; }
+          .nx-process-circle { margin-bottom: 0 !important; }
+          .nx-process-text { padding-top: 4px; }
         }
       `}</style>
     </section>
@@ -185,7 +190,7 @@ function PmCase() {
       <div className="container-nx">
         <div style={{ display: 'grid', gridTemplateColumns: '1.1fr 1fr', gap: 64, alignItems: 'center' }} className="nx-two-col">
           <div>
-<h2 className="font-display display-lg" style={{ margin: '0 0 28px', fontWeight: 500, textWrap: 'balance' }}>
+<h2 className="font-display display-lg" style={{ margin: 0, fontWeight: 500, textWrap: 'balance' }}>
               R$ 5.000 investidos.<br/><em style={{ fontStyle: 'italic', color: 'var(--nx-accent)' }}>R$ 400.000 faturados.</em>
             </h2>
             <p style={{ fontSize: 18, lineHeight: 1.6, color: 'rgba(245,239,224,0.78)', marginBottom: 36 }}>
@@ -215,24 +220,6 @@ function PmCase() {
               aspect="4/5"
               dark
             />
-          </div>
-        </div>
-
-        <div style={{ marginTop: 80, paddingTop: 48, borderTop: '1px solid var(--nx-green-line)' }}>
-          <div className="font-mono" style={{ fontSize: 11, letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--nx-accent)', marginBottom: 28 }}>
-            ⊹ Próximos cases — em produção
-          </div>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 16 }} className="nx-services-grid">
-            {[
-              { nome: 'Ana Moreira', status: 'Campanha em otimização' },
-              { nome: 'Alice', status: 'Mês 2 · escalando' },
-              { nome: 'Viviane', status: 'Diagnóstico aprovado' },
-            ].map((c, i) => (
-              <div key={i} style={{ padding: 28, border: '1px solid var(--nx-green-line)', borderRadius: 'var(--nx-radius)' }}>
-                <div className="font-display" style={{ fontSize: 22, color: 'var(--nx-cream)', letterSpacing: '-0.02em', marginBottom: 8 }}>{c.nome}</div>
-                <div className="font-mono" style={{ fontSize: 10, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'rgba(245,239,224,0.55)' }}>{c.status}</div>
-              </div>
-            ))}
           </div>
         </div>
       </div>
@@ -267,7 +254,7 @@ function PmForm() {
     <section id="formulario" className="surface-cream sec">
       <div className="container-nx">
         <div style={{ maxWidth: 780, marginBottom: 48 }}>
-<h2 className="font-display display-lg" style={{ margin: '0 0 16px', fontWeight: 500, textWrap: 'balance' }}>
+<h2 className="font-display display-lg" style={{ margin: 0, fontWeight: 500, textWrap: 'balance' }}>
             Chega de queimar verba em <em style={{ fontStyle: 'italic', color: 'var(--nx-green)' }}>anúncio que não converte.</em>
           </h2>
           <p style={{ fontSize: 18, color: '#2a3a30', lineHeight: 1.55 }}>

@@ -22,7 +22,7 @@ function HomeHero() {
 
       <div className="container-nx" style={{ position: 'relative', zIndex: 2, padding: '140px 28px 120px' }}>
         <div style={{ maxWidth: 980 }}>
-<h1 className="font-display display-xl" style={{ margin: '0 0 32px', fontWeight: 500, textWrap: 'balance' }}>
+<h1 className="font-display display-xl" style={{ margin: 0, fontWeight: 500, textWrap: 'balance' }}>
             Conectamos o negócio<br/>que existe ao que<br/><em style={{ fontStyle: 'italic', color: 'var(--nx-accent)' }}>ele deveria ser.</em>
           </h1>
           <p style={{ fontSize: 19, lineHeight: 1.55, color: 'rgba(245,239,224,0.78)', maxWidth: 620, marginBottom: 44, textWrap: 'pretty' }}>
@@ -108,7 +108,7 @@ function HomeSobre() {
             </div>
           </div>
           <div>
-<h2 className="font-display display-lg" style={{ margin: '0 0 32px', fontWeight: 500, textWrap: 'balance' }}>
+<h2 className="font-display display-lg" style={{ margin: 0, fontWeight: 500, textWrap: 'balance' }}>
               De quem opera.<br/><em style={{ fontStyle: 'italic', color: 'var(--nx-green)' }}>Não de quem ensina.</em>
             </h2>
             <p style={{ fontSize: 18, lineHeight: 1.65, marginBottom: 20, color: '#2a3a30' }}>
@@ -219,7 +219,7 @@ function HomeCase() {
             style={{ width: '100%', aspectRatio: '4/5', objectFit: 'cover', display: 'block', borderRadius: 'var(--nx-radius)' }}
           />
           <div>
-<h2 className="font-display display-md" style={{ margin: '0 0 24px', fontWeight: 500, lineHeight: 1.05, textWrap: 'balance' }}>
+<h2 className="font-display display-md" style={{ margin: 0, fontWeight: 500, lineHeight: 1.05, textWrap: 'balance' }}>
               R$ 400.000 em vendas.<br/>R$ 5.000 em mídia.<br/><em style={{ fontStyle: 'italic', color: 'var(--nx-green)' }}>30 dias.</em>
             </h2>
             <p style={{ fontSize: 17, lineHeight: 1.6, marginBottom: 36, color: '#2a3a30' }}>
@@ -254,7 +254,7 @@ function HomeFinalCTA() {
         <img src="/atomo-branco.png" alt="" aria-hidden="true" style={{ width: 600, height: 600, objectFit: 'contain' }} />
       </div>
       <div className="container-nx" style={{ position: 'relative', zIndex: 2, textAlign: 'center', maxWidth: 880, margin: '0 auto' }}>
-<h2 className="font-display display-lg" style={{ margin: '0 0 28px', fontWeight: 500, textWrap: 'balance' }}>
+<h2 className="font-display display-lg" style={{ margin: 0, fontWeight: 500, textWrap: 'balance' }}>
           Seu negócio é bom.<br/><em style={{ fontStyle: 'italic', color: 'var(--nx-accent)' }}>Está na hora de aparecer como tal.</em>
         </h2>
         <p style={{ fontSize: 18, color: 'rgba(245,239,224,0.75)', maxWidth: 600, margin: '0 auto 40px', lineHeight: 1.6 }}>

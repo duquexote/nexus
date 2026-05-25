@@ -15,7 +15,7 @@ function SsHero() {
 
       <div className="container-nx" style={{ position: 'relative', zIndex: 2, padding: '120px 28px 110px' }}>
         <div style={{ maxWidth: 980 }}>
-<h1 className="font-display display-xl" style={{ margin: '0 0 32px', fontWeight: 500, textWrap: 'balance' }}>
+<h1 className="font-display display-xl" style={{ margin: 0, fontWeight: 500, textWrap: 'balance' }}>
             Sua empresa precisa de algo que <em style={{ fontStyle: 'italic', color: 'var(--nx-accent)' }}>não está no cardápio?</em> A Nexus resolve.
           </h1>
           <p style={{ fontSize: 19, lineHeight: 1.55, color: 'rgba(245,239,224,0.78)', maxWidth: 660, marginBottom: 44, textWrap: 'pretty' }}>
@@ -89,7 +89,7 @@ function SsExemplos() {
               }} className="nx-exemp-cell">
                 <div style={{ color: it.highlight ? 'var(--nx-accent)' : 'var(--nx-green)' }}>{it.icon}</div>
                 <div>
-                  <h3 className="font-display" style={{ fontSize: 24, margin: '0 0 12px', fontWeight: 500, letterSpacing: '-0.02em', color: it.highlight ? 'var(--nx-cream)' : 'var(--nx-green)' }}>{it.t}</h3>
+                  <h3 className="font-display" style={{ fontSize: 24, margin: 0, fontWeight: 500, letterSpacing: '-0.02em', color: it.highlight ? 'var(--nx-cream)' : 'var(--nx-green)' }}>{it.t}</h3>
                   <p style={{ fontSize: 15, lineHeight: 1.55, margin: 0, color: it.highlight ? 'rgba(245,239,224,0.78)' : '#2a3a30' }}>{it.d}</p>
                 </div>
               </div>
@@ -134,7 +134,7 @@ function SsProcesso() {
               <div className="font-display" style={{ fontSize: 86, fontWeight: 500, color: 'var(--nx-cream-line)', lineHeight: 1, letterSpacing: '-0.04em', marginBottom: 24 }}>
                 {s.n}
               </div>
-              <h3 className="font-display" style={{ fontSize: 28, margin: '0 0 14px', fontWeight: 500, letterSpacing: '-0.02em', color: 'var(--nx-green)' }}>{s.t}</h3>
+              <h3 className="font-display" style={{ fontSize: 28, margin: 0, fontWeight: 500, letterSpacing: '-0.02em', color: 'var(--nx-green)' }}>{s.t}</h3>
               <p style={{ fontSize: 15, lineHeight: 1.6, color: '#2a3a30', margin: 0 }}>{s.d}</p>
             </div>
           ))}
@@ -164,7 +164,7 @@ function SsPorque() {
       <div className="container-nx">
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1.1fr', gap: 80, alignItems: 'center' }} className="nx-two-col">
           <div>
-<h2 className="font-display display-lg" style={{ margin: '0 0 28px', fontWeight: 500, textWrap: 'balance' }}>
+<h2 className="font-display display-lg" style={{ margin: 0, fontWeight: 500, textWrap: 'balance' }}>
               Não vendemos pacote. <em style={{ fontStyle: 'italic', color: 'var(--nx-green)' }}>Resolvemos problema.</em>
             </h2>
             <p style={{ fontSize: 18, lineHeight: 1.65, color: '#2a3a30', marginBottom: 0 }}>
@@ -202,7 +202,7 @@ function SsFinalCTA() {
         <img src="/atomo-branco.png" alt="" aria-hidden="true" style={{ width: 700, height: 700, objectFit: 'contain' }} />
       </div>
       <div className="container-nx" style={{ position: 'relative', zIndex: 2, textAlign: 'center', maxWidth: 900, margin: '0 auto' }}>
-<h2 className="font-display display-lg" style={{ margin: '0 0 28px', fontWeight: 500, textWrap: 'balance' }}>
+<h2 className="font-display display-lg" style={{ margin: 0, fontWeight: 500, textWrap: 'balance' }}>
           Conta o desafio. <em style={{ fontStyle: 'italic', color: 'var(--nx-accent)' }}>A Nexus avalia.</em>
         </h2>
         <p style={{ fontSize: 18, color: 'rgba(245,239,224,0.78)', maxWidth: 620, margin: '0 auto 40px', lineHeight: 1.6 }}>
