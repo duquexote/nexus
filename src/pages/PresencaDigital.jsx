@@ -22,7 +22,7 @@ function PdHero() {
             Seu negócio merece um site que <em style={{ fontStyle: 'italic', color: 'var(--nx-accent)' }}>vende enquanto você dorme.</em>
           </h1>
           <p style={{ fontSize: 19, lineHeight: 1.55, color: 'rgba(245,239,224,0.78)', maxWidth: 640, marginBottom: 44, textWrap: 'pretty' }}>
-            Não é só um site bonito. É a estrutura que conecta quem te procura ao momento de comprar. Desenvolvido em 3 a 5 dias, integrado com WhatsApp, pixel do Meta instalado e pronto para rodar anúncio.
+            Não é só um site bonito. É a estrutura que conecta quem te procura ao momento de comprar. Desenvolvido em até 24h, integrado com WhatsApp, pixel do Meta instalado e pronto para rodar anúncio.
           </p>
           <div style={{ display: 'flex', gap: 14, flexWrap: 'wrap' }}>
             <a href="#formulario" className="btn btn-primary-light">Quero meu site agora <ArrowD /></a>
@@ -32,7 +32,7 @@ function PdHero() {
 
         <div style={{ marginTop: 110, display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 0, borderTop: '1px solid var(--nx-green-line)', paddingTop: 28 }} className="nx-hero-meta">
           {[
-            { k: 'Prazo', v: '3-5 dias' },
+            { k: 'Prazo', v: '24h' },
             { k: 'Parcelamento', v: 'Até 3x' },
             { k: 'Suporte', v: '30 dias' },
             { k: 'Pixel Meta', v: 'Incluído' },
@@ -102,7 +102,7 @@ function PdIncluido() {
     'Formulário integrado com WhatsApp',
     'Pixel do Meta instalado e configurado',
     'SEO básico aplicado para aparecer no Google',
-    'Entrega em 3 a 5 dias úteis',
+    'Entrega em até 24h',
     'Parcelado em até 3x',
     'Suporte de 30 dias após a entrega',
   ]
